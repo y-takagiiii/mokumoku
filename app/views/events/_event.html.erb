@@ -4,6 +4,11 @@
       <%= image_tag event.decorate.thumbnail, class: 'card-img-top border-bottom' %>
     <% end %>
     <div class="card-body">
+      <div class="card-held_type">
+        <h3>
+          <%= event.held_type_i18n + '開催' %>
+        </h3>
+      </div>
       <h4 class="card-title fw-bold">
         <%= link_to event.title, event_path(event)  %>
       </h4>

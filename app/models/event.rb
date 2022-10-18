@@ -18,6 +18,7 @@ class Event < ApplicationRecord
     validates :title
     validates :content
     validates :held_at
+    validates :held_type
   end
 
   enum held_type: { offline: 0, online: 1 }
