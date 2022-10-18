@@ -20,6 +20,8 @@ class Event < ApplicationRecord
     validates :held_at
   end
 
+  enum type: { offline: 0, online: 1 }
+
   def past?
     held_at < Time.current
   end
