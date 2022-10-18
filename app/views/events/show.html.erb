@@ -68,6 +68,17 @@
       </div>
       <div class="card mb-3">
         <div class="card-body">
+          <div class="bg-info text-center p-2 text-white rounded">
+            <% if @event.online? %>
+              オンライン開催
+            <% else %>
+              オフライン開催
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
           <div class="bg-primary text-center p-2 text-white rounded mb-3">
             <% if @event.past? %>
               開催済み
