@@ -21,6 +21,8 @@ class Event < ApplicationRecord
     validates :held_type
   end
 
+  validates :online_url, format: /\A#{URI::regexp(%w(https))}\z/
+
   enum held_type: { offline: 0, online: 1 }
 
   def past?

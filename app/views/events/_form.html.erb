@@ -12,11 +12,15 @@
     <%= f.label :held_at %>
     <%= f.datetime_field :held_at, class: 'form-control' %>
   </div>
-  <div class="mb-3">  
+  <div class="mb-3">
     <%= f.label :held_type_offline, 'オフライン' %>
     <%= f.radio_button :held_type, :offline %>
     <%= f.label :held_type_online, 'オンライン' %>
     <%= f.radio_button :held_type, :online %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :online_url %>
+    <%= f.text_field :online_url, class: 'form-control' %>
   </div>
   <div class="mb-3">
     <%= f.label :prefecture_id %>
