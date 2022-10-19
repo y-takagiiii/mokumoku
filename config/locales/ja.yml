@@ -7,6 +7,6 @@ ja:
         attended_to_event: あなたのイベントに参加申し込みがあった時
         liked_event: あなたのイベントにいいねがついた時
     event:
-      held_type:
+      location:
         offline: 'オフライン'
         online: 'オンライン'

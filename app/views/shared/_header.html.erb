@@ -7,8 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <%= search_form_for @q || Event.ransack(params[:q]), url: @search_path || events_path, class: 'd-flex align-items-center' do |f| %>
         <%= f.search_field :title_or_content_cont, class: 'form-control form-control-sm me-2', placeholder: 'もくもく会検索' %>
-        <%= f.select :held_type_eq,
-          Event.held_types_i18n.invert.map{ |key, value| [key, Event.held_types[value]] },
+        <%= f.select :location_eq,
+          Event.locations_i18n.invert.map{ |key, value| [key, Event.locations[value]] },
           { include_blank: '指定なし' },
           { class: 'form-select form-select-sm me-2' }
         %>

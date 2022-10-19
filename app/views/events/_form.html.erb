@@ -13,10 +13,8 @@
     <%= f.datetime_field :held_at, class: 'form-control' %>
   </div>
   <div class="mb-3">
-    <%= f.label :held_type_offline, 'オフライン' %>
-    <%= f.radio_button :held_type, :offline %>
-    <%= f.label :held_type_online, 'オンライン' %>
-    <%= f.radio_button :held_type, :online %>
+    <%= f.label :location %>
+    <%= f.select :location, Event.locations_i18n.invert, {}, { class: 'form-select form-select-sm me-2' } %>
   </div>
   <div class="mb-3">
     <%= f.label :online_url %>
