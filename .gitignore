@@ -42,4 +42,5 @@ yarn-debug.log*
 /config/credentials/production.key
 
 mokumoku.dio
-coverage
+/coverage/.resultset.json
+/coverage/index.html
