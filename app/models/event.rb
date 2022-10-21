@@ -18,7 +18,12 @@ class Event < ApplicationRecord
     validates :title
     validates :content
     validates :held_at
+    validates :location
   end
+
+  validates :online_url, format: /\A#{URI::regexp('https')}\z/, if: :check_online_url
+
+  enum location: { offline: 0, online: 1 }
 
   def past?
     held_at < Time.current
@@ -26,5 +31,9 @@ class Event < ApplicationRecord
 
   def future?
     !past?
+  end
+
+  def check_online_url
+    online_url.present?
   end
 end

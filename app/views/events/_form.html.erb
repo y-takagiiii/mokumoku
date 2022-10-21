@@ -13,6 +13,14 @@
     <%= f.datetime_field :held_at, class: 'form-control' %>
   </div>
   <div class="mb-3">
+    <%= f.label :location %>
+    <%= f.select :location, Event.locations_i18n.invert, {}, { class: 'form-select form-select-sm me-2' } %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :online_url %>
+    <%= f.text_field :online_url, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
     <%= f.label :prefecture_id %>
     <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, {}, class: 'form-select' %>
   </div>

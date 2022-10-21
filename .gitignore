@@ -40,3 +40,7 @@ yarn-debug.log*
 .yarn-integrity
 
 /config/credentials/production.key
+
+mokumoku.dio
+/coverage/.resultset.json
+/coverage/index.html
